@@ -1,0 +1,21 @@
+@import url(./icons.css);
+
+.button {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.text-muted {
+    color: #717171;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid white;
+}
