@@ -1,0 +1,19 @@
+
+.productCard::before{
+    content: '';
+    position: absolute;
+    height: 40%;
+    background: linear-gradient(180deg, #FFA500 0%, #996300 100%);
+
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.productCard:hover::before{
+    height: 100%;
+}

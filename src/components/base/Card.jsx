@@ -16,9 +16,8 @@ function Card({
   price,
 }) {
   return (
-    <div className="relative text-black border rounded-[8.1%] overflow-hidden">
+    <div className="relative text-black border rounded-[8.1%] overflow-hidden productCard cursor-pointer">
       <div className="relative image_section">
-        <img src={yellow_pad} className="absolute z-[-1]" />
         <div className="stats grid grid-cols-2 border-[#75777A] border-b w-full">
           <div className="timeRemaining border-r border-[#75777A] flex items-center gap-2 justify-center p-3">
             <img src={clock_small_icon} alt="" className="h-4" />

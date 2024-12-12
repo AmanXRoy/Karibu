@@ -2,7 +2,9 @@ import React from 'react'
 import toyota_jeep from "../../assets/images/toyota_jeep_bg.png"
 import one from "../../assets/images/1.png"
 import two from "../../assets/images/2.png"
-import three from "../../assets/images/3.png"
+import three from "../../assets/images/3.png";
+import sparkleGif from '../../assets/images/sparkle.gif';
+
 
 const stepsData = [
     {
@@ -38,6 +40,7 @@ function Guide() {
                 to <span className='text-success underline'>Success!</span>
             </p>
             <img src={toyota_jeep} alt="Toyota Jeep" className="w-1/3" />
+            <img src={sparkleGif} alt="sparkle" />
         </div>
         <div className="steps flex justify-between">
             {

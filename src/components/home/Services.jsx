@@ -3,6 +3,8 @@ import raider_coutout from '../../assets/images/raider_cutout.png';
 import icon1 from '../../assets/images/service-icon-1.png';
 import icon2 from '../../assets/images/service-icon-2.png';
 import icon3 from '../../assets/images/service-icon-3.png';
+import circleGif from '../../assets/images/circle.gif';
+
 
 const serviceList = [
   {
@@ -31,7 +33,9 @@ function Services() {
   return (
     <div className="flex text-black p-16">
       <div className="raider w-1/2 flex items-center relative">
-        <img className="absolute left-[-40%]" src={raider_coutout} alt="tvs raider" />
+      <img className="absolute left-0 z-10
+        " src={raider_coutout} alt="tvs raider" data-aos="fade-right" data-aos-delay="50" />
+        <img className="absolute left-[25%] z-0" src={circleGif} alt="tvs raider" />
       </div>
       <div className="service_info w-1/2">
         <h2 className="text-5xl font-bold leading-tight">
