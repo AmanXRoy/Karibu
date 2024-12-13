@@ -6,6 +6,7 @@ import Navbar from "./components/shared/Navbar"
 import TopBanner from './components/shared/TopBanner'
 import AllCompetition from "./pages/AllCompetition"
 import Details from "./pages/Details"
+import Login from "./components/Login/Login"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/all-competition" element={<AllCompetition />} />
           <Route path="/detail" element={<Details />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </div>

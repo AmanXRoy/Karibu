@@ -3,6 +3,7 @@ import footerlogo from "../../assets/images/footerlogo.png";
 import location_icon from "../../assets/images/location_icon.png";
 import mail_icon from "../../assets/images/mail_icon.png";
 import telephone_icon from "../../assets/images/telephone_icon.png";
+import RouterLink from '../base/RouterLink';
 
 function Footer() {
     return (
@@ -16,11 +17,24 @@ function Footer() {
             <div className='w-1/5 mt-5'>
                 <p className="font-semibold mb-3">Quick Links</p>
                 <ul className="grid gap-1">
-                    <li>Home</li>
-                    <li>Listing</li>
-                    <li>Details</li>
-                    <li>Login</li>
-                    <li>Live Draw</li>
+                    <RouterLink to='/' >
+                    <li className="text-[#000]">Home</li>
+                    </RouterLink>
+                    <RouterLink to='/'>
+                    <li className="text-[#000]">Listing</li>
+                    </RouterLink>
+                    <RouterLink to='/'>
+                    <li className="text-[#000]">Details</li>
+                    
+                    </RouterLink>
+                    <RouterLink to='/login'>
+                    <li className="text-[#000]">Login</li>
+                    
+                    </RouterLink>
+                    <RouterLink to='/live-draw'>
+                    <li className="text-[#000]">Live Draw</li>
+                    
+                    </RouterLink>
                 </ul>
             </div>
             <div className='w-1/5 mt-5'>
