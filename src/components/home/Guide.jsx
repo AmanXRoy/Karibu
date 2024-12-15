@@ -39,7 +39,7 @@ function Guide() {
                 <br />
                 to <span className='text-success underline'>Success!</span>
             </p>
-            <img src={toyota_jeep} alt="Toyota Jeep" className="w-1/3" />
+            <img src={toyota_jeep} alt="Toyota Jeep" className="w-1/3 absolute right-[100px]" />
             <img src={sparkleGif} alt="sparkle" />
         </div>
         <div className="steps flex justify-between">

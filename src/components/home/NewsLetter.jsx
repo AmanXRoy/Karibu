@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import heartGIF from '../../assets/images/heart.gif';
+import helloRobot from '../../assets/images/helloRobot.gif';
 
 function NewsLetter() {
     return (
-        <div className="bg-black p-32 flex">
+        <div className="bg-black p-32 flex relative bg-[url('../../assets/images/helloRobot.gif')]">
             <div className='w-1/2 flex flex-col justify-between'>
                 <div>
                     <p className="text-success font-bold">Call to Action</p>
@@ -16,7 +18,7 @@ function NewsLetter() {
                 </div>
             </div>
             <div className='w-1/2'>
-                <div className="newsLetterForm bg-primary rounded-ss-[15%] rounded-se-none rounded-es-none rounded-ee-[15%] p-8 py-16 w-[60%] mx-auto">
+                <div className="newsLetterForm bg-primary rounded-ss-[15%] rounded-se-none rounded-es-none rounded-ee-[15%] p-8 py-16 w-[60%] mx-auto ">
                     <h2 className="text-5xl font-bold mb-6">News Letter</h2>
                     <form className='grid gap-10'>
                         <div className="form_group">
@@ -31,6 +33,7 @@ function NewsLetter() {
                     </form>
                 </div>
             </div>
+            <img src={heartGIF} className='absolute top-0 right-0 z-0'/>
         </div>
     )
 }
