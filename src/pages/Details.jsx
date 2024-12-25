@@ -6,9 +6,9 @@ import LotteryDetails from './LotteryDetails'
 function Details() {
   return (
     <div className="relative">
-        {/* <DetailsBanner />
-        <CompetitionDescription /> */}
-        <LotteryDetails/>
+        <DetailsBanner />
+        <CompetitionDescription />
+        {/* <LotteryDetails/> */}
     </div>
   )
 }

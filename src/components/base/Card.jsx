@@ -6,6 +6,7 @@ import ticket from "../../assets/images/ticket.png"
 import calendar_small_icon from "../../assets/images/calendar_small_icon.png"
 import external_link from "../../assets/images/external_link_icon.png"
 import Progress from "./Progress";
+import { Link } from "react-router-dom";
 
 function Card({
   timeRemaining,
@@ -17,6 +18,7 @@ function Card({
   price,
 }) {
   return (
+    <Link to={'detail'}>
     <div className="relative text-black border rounded-[8.1%] overflow-hidden productCard cursor-pointer">
       <div className="relative image_section">
         <div className="stats grid grid-cols-2 border-[#75777A] border-b w-full">
@@ -53,6 +55,7 @@ function Card({
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 

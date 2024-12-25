@@ -7,6 +7,7 @@ import TopBanner from './components/shared/TopBanner'
 import AllCompetition from "./pages/AllCompetition"
 import Details from "./pages/Details"
 import Login from "./components/Login/Login"
+import LotteryDetails from "./pages/LotteryDetails"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/all-competition" element={<AllCompetition />} />
           <Route path="/detail" element={<Details />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/lotteryDetails" element={<LotteryDetails />} />
         </Routes>
         <Footer />
       </div>

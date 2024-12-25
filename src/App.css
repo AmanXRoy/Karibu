@@ -21,4 +21,6 @@ body{
 
 .productCard:hover::before{
     height: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius:0;
 }

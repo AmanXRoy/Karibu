@@ -45,14 +45,14 @@ const LotteryDetails = () => {
                             <p className='text-[#28A745] text-[30px] text-center mt-[89px]'>Buy more tickets to increase your chances of winning</p>
                         </div>
                     </div>
-                <div className="flex flex-wrap gap-5 justify-between mt-5 ml-7 max-w-full text-5xl font-semibold w-[1179px] max-md:text-4xl">
-                    <div className="my-auto text-orange-500 max-md:text-4xl">
-                        Price $ 5.00
+                    <div className="flex flex-wrap gap-5 justify-between mt-5 ml-7 max-w-full text-5xl font-semibold w-[1179px] max-md:text-4xl">
+                        <div className="my-auto text-orange-500 max-md:text-4xl">
+                            Price $ 5.00
+                        </div>
+                        <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors">
+                            Buy
+                        </button>
                     </div>
-                    <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors">
-                        Buy
-                    </button>
-                </div>
                 </div>
             </div>
         </>
