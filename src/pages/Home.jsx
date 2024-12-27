@@ -5,6 +5,7 @@ import Services from '../components/home/Services'
 import ChampionSection from '../components/home/ChampionSection'
 import NextDraw from '../components/home/NextDraw'
 import NewsLetter from '../components/home/NewsLetter'
+import Partners from '../components/partners/Partners'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Guide />
         <Services />
         <ChampionSection />
+        <Partners/>
         <NextDraw />
         <NewsLetter />
     </div>

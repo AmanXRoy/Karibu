@@ -15,6 +15,7 @@ const LotteryDetails = () => {
                             <div className="self-start mt-2.5 leading-none max-md:max-w-full max-md:text-4xl">
                                 "Grab Your Ticket to{" "}
                             </div>
+
                             <div className="mt-2.5 mr-8 ml-6 leading-none max-md:mr-2.5 max-md:max-w-full max-md:text-4xl">
                                 Life-<span className="text-amber-500">Changing Prizes </span>
                                 !"{" "}
@@ -34,7 +35,7 @@ const LotteryDetails = () => {
                         />
                     </div>
                 </div>
-                <div className='ticketContainer px-[100px] bg-[#F5E5C7]'>
+                <div className='ticketContainer px-[100px] bg-[#F5E5C7] py-[20px]'>
                     <p className='text-[28px] text-[#4E4E4E] font-semibold mt-[80px]'>How Many Tickets Do You Want?</p>
                     <div className="lotteryDetailsWrapper flex items-center">
                         <div className="lotteryitemImage border-r-[1px] border-[#fff] border-solid">
@@ -45,13 +46,13 @@ const LotteryDetails = () => {
                             <p className='text-[#28A745] text-[30px] text-center mt-[89px]'>Buy more tickets to increase your chances of winning</p>
                         </div>
                     </div>
-                    <div className="flex flex-wrap gap-5 justify-between mt-5 ml-7 max-w-full text-5xl font-semibold w-[1179px] max-md:text-4xl">
-                        <div className="my-auto text-orange-500 max-md:text-4xl">
-                            Price $ 5.00
-                        </div>
-                        <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors">
+                    <div className="flex flex-wrap gap-5 justify-between mt-5 ml-7 max-w-full text-5xl font-semibold w-[1179px] max-md:text-4xl py-[20px] border-t-[1px] border-t-[#fff] border-b-[1px] border-solid border-b-[#fff]">
+                        <div className="my-auto flex items-center flex-1">
+                           <p className='text-orange-500 max-md:text-4xl'> Price $ 5.00</p>
+                        <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors  py-[30px] px-[90px] ms-auto">
                             Buy
                         </button>
+                        </div>
                     </div>
                 </div>
             </div>

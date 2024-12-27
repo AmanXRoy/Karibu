@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import './App.css'
 import Home from './pages/Home'
 import Footer from "./components/shared/Footer"
@@ -8,9 +8,14 @@ import AllCompetition from "./pages/AllCompetition"
 import Details from "./pages/Details"
 import Login from "./components/Login/Login"
 import LotteryDetails from "./pages/LotteryDetails"
+import { useEffect } from "react"
 
 function App() {
+const pathName = useLocation()
 
+useEffect(()=>{
+  window.scrollTo(0,0)
+},[pathName])
   return (
     <>
       <div className="main">
