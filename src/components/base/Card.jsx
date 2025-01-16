@@ -22,14 +22,14 @@ function Card({
     <div className="relative text-black border rounded-[8.1%] overflow-hidden productCard cursor-pointer">
       <div className="relative image_section">
         <div className="stats grid grid-cols-2 border-[#75777A] border-b w-full">
-          <div className="timeRemaining border-r border-[#75777A] flex items-center gap-2 justify-center p-3">
+          {/* <div className="timeRemaining border-r border-[#75777A] flex items-center gap-2 justify-center p-3">
             <img src={clock_small_icon} alt="" className="h-4" />
             {timeRemaining}
           </div>
           <div className="ticketsRemaining flex items-center gap-2 justify-center p-3">
             <img src={calendar_small_icon} alt="" className="h-4" />
             {ticketsRemaining} Remaining
-          </div>
+          </div> */}
         </div>
         <div className="flex justify-center">
           <img src={image} alt="prize" className="h-[300px]" />

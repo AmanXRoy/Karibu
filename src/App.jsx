@@ -25,6 +25,7 @@ useEffect(()=>{
           <Route path="/" element={<Home />} />
           <Route path="/all-competition" element={<AllCompetition />} />
           <Route path="/detail" element={<Details />} />
+          <Route path="/all-competition/detail" element={<Details />} />
           <Route path="/login" element={<Login />} />
           <Route path="/lotteryDetails" element={<LotteryDetails />} />
         </Routes>
