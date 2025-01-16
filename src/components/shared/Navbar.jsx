@@ -38,8 +38,10 @@ function Navbar() {
       <RouterLink to="/live-draw">Live Draw</RouterLink>
       <RouterLink to="/winner">Winners</RouterLink>
       <div className="buttonWrapper relative">
-        <button className='rounded-[100px] bg-[#FFA500] py-4 px-8' onClick={toggleDropdown}>Login</button>
-        {showDropdown && <div className="dropdown absolute bg-white py-2 rounded-[10px] top-16 right-0 w-[200px] z-10" ref={dropdownRef}>
+      <Link to={'/login'}>
+        <button className='rounded-[100px] bg-[#FFA500] py-4 px-8'>Login</button>
+      </Link>
+        {/* {showDropdown && <div className="dropdown absolute bg-white py-2 rounded-[10px] top-16 right-0 w-[200px] z-10" ref={dropdownRef}>
           <Link to={'/login?type=user'}>
             <button className='bg-[#FFA500] w-full p-2 border-[#fff] border-solid border-b-[2px]'>Login as User</button>
           </Link>
@@ -49,7 +51,7 @@ function Navbar() {
           <Link to={'/login?type=shop'}>
           <button className='bg-[#FFA500] w-full p-2 border-[#fff] border-solid border-b-[2px]'>Login as Shop</button>
           </Link>
-        </div>}
+        </div>} */}
 
       </div>
     </div>

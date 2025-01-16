@@ -12,7 +12,7 @@ const VerifyOTP = () => {
                     <p className='text-[48px] text-white font-light'>Please type the verification code sent to</p>
                     <p className='text-[48px] text-white font-semibold'>+91 9778652365</p>
                     <form className="otpForm pt-[37px] pb-[55px]">
-                        {otpControl.map((control: number) => <input key={control} type='text' className='otpcontorl w-[118px] h-[118px] mx-4 first-of-type:ms-0 rounded-[34px] bg-transparent border-solid border-[3px] border-[#fff] forcus:border-[3px]' />)}
+                        {otpControl.map((control) => <input key={control} type='text' className='otpcontorl w-[118px] h-[118px] mx-4 first-of-type:ms-0 rounded-[34px] bg-transparent border-solid border-[3px] border-[#fff] forcus:border-[3px]' />)}
                     </form>
                     <div className="ctaWrapper flex items-center">
                         <p className='text-[38px] font-semibold text-white me-[60px]'>Verify Code</p>

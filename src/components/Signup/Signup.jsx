@@ -9,7 +9,7 @@ const Signup = () => {
     return (
         <>
             <div className='relative'>
-                <h1 className='text-[64px] text-center font-semibold'>Signup</h1>
+                <h1 className='text-5xl text-center font-semibold'>Signup</h1>
 
                 <div className="signupForm grid grid-cols-2 gap-20 pt-[100px] pb-20">
                     <div className="inputControl px-6 py-4 flex items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1">
@@ -33,9 +33,9 @@ const Signup = () => {
                                 if (file) {
                                     const reader = new FileReader();
                                     reader.onload = (e) => {
-                                        const preview = document.getElementById('frontPreview') as HTMLImageElement;
+                                        const preview = document.getElementById('frontPreview');
                                         if (preview && e.target?.result) {
-                                            preview.src = e.target.result as string;
+                                            preview.src = e.target.result;
                                             preview.style.display = 'block';
                                         }
                                     };
@@ -59,9 +59,9 @@ const Signup = () => {
                                 if (file) {
                                     const reader = new FileReader();
                                     reader.onload = (e) => {
-                                        const preview = document.getElementById('backPreview') as HTMLImageElement;
+                                        const preview = document.getElementById('backPreview');
                                         if (preview && e.target?.result) {
-                                            preview.src = e.target.result as string;
+                                            preview.src = e.target.result;
                                             preview.style.display = 'block';
                                         }
                                     };
