@@ -4,6 +4,27 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+.winnerCard{
+    border-radius: 24px;
+    border: 1px solid #C1B4B4;
+    flex: 0 0 350px;
+}
+
+.winnerCard .winnerItemImage{
+    background: linear-gradient(180deg, rgb(255, 165, 0, 0.5) 0%, rgb(153, 99, 0,0.5) 100%);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.winnerCard .winnerItemDetails{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
 .productCard::before{
     content: '';
     position: absolute;

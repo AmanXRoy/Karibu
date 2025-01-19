@@ -9,13 +9,16 @@ import Details from "./pages/Details"
 import Login from "./components/Login/Login"
 import LotteryDetails from "./pages/LotteryDetails"
 import { useEffect } from "react"
+import Winner from "./components/Winner/Winner"
+import Faq from "./components/Faq/Faq"
+import Privacy from "./components/Privacy/Privacy"
 
 function App() {
-const pathName = useLocation()
+  const pathName = useLocation()
 
-useEffect(()=>{
-  window.scrollTo(0,0)
-},[pathName])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathName])
   return (
     <>
       <div className="main">
@@ -28,6 +31,9 @@ useEffect(()=>{
           <Route path="/all-competition/detail" element={<Details />} />
           <Route path="/login" element={<Login />} />
           <Route path="/lotteryDetails" element={<LotteryDetails />} />
+          <Route path="/winner" element={<Winner />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/privacypolicy" element={<Privacy />} />
         </Routes>
         <Footer />
       </div>
