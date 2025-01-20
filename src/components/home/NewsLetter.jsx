@@ -19,13 +19,16 @@ function NewsLetter() {
             </div>
             <div className='w-1/2'>
                 <div className="newsLetterForm bg-primary rounded-ss-[15%] rounded-se-none rounded-es-none rounded-ee-[15%] p-8 py-16 w-[60%] mx-auto ">
-                    <h2 className="text-5xl font-bold mb-6">News Letter</h2>
+                    <h2 className="text-5xl font-bold mb-6">Reach Us</h2>
                     <form className='grid gap-10'>
                         <div className="form_group">
-                            <input type="text" placeholder="Name" className="border border-white placeholder:text-white bg-transparent rounded-full p-3 w-full" />
+                            <input type="text" placeholder="Name" className="border border-white placeholder:text-white bg-transparent rounded-[16px] p-4 w-full" />
                         </div>
                         <div className="form_group">
-                            <input type="email" placeholder="Email" className="border border-white placeholder:text-white bg-transparent rounded-full p-3 w-full" />
+                            <input type="email" placeholder="Email" className="border border-white placeholder:text-white bg-transparent rounded-[16px] p-4 w-full" />
+                        </div>
+                        <div className="form_group">
+                            <textarea  placeholder="Description" className="border border-white placeholder:text-white bg-transparent rounded-[16px] p-4 w-full" />
                         </div>
                         <div className="action">
                             <button className="button rounded-full px-6 py-2 bg-black text-white font-semibold">Submit</button>

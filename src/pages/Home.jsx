@@ -15,7 +15,6 @@ function Home() {
         <Services />
         <ChampionSection />
         <Partners/>
-        <NextDraw />
         <NewsLetter />
     </div>
   )
