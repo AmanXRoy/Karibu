@@ -21,19 +21,15 @@ function Footer() {
                         <RouterLink to='/' >
                             <li className="text-[#000]">Home</li>
                         </RouterLink>
-                        <RouterLink to='/'>
-                            <li className="text-[#000]">Listing</li>
+                        <RouterLink to='/all-competition'>
+                            <li className="text-[#000]">All Competitions</li>
                         </RouterLink>
                         <RouterLink to='/'>
-                            <li className="text-[#000]">Details</li>
-
-                        </RouterLink>
-                        <RouterLink to='/login'>
-                            <li className="text-[#000]">Login</li>
-
-                        </RouterLink>
-                        <RouterLink to='/live-draw'>
                             <li className="text-[#000]">Live Draw</li>
+
+                        </RouterLink>
+                        <RouterLink to='/winner'>
+                            <li className="text-[#000]">Winner</li>
 
                         </RouterLink>
                     </ul>
