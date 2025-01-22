@@ -22,167 +22,137 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox";
+import { CalendarIcon } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+import { Calendar } from "@/components/ui/calendar"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
 
 
-const Signup = () => {
+const Signup = (showLoginForm) => {
+    console.log(showLoginForm.showLoginForm)
+    const [date, setDate] = React.useState()
     return (
         <>
             <div className='relative'>
                 <h1 className='text-5xl text-center font-semibold'>Signup</h1>
                 <Tabs defaultValue="loginUser" className="w-full h-full my-4">
                     <TabsList className="grid w-full grid-cols-2 bg-primary text-[#000] p-1 h-full">
-                        <TabsTrigger value="loginUser" className="p-4">Signup as User/Merchant</TabsTrigger>
-                        <TabsTrigger value="loginShop" className="p-4">Signup as Shop</TabsTrigger>
+                        <TabsTrigger value="loginUser" className="p-4">Signup as Individual</TabsTrigger>
+                        <TabsTrigger value="loginShop" className="p-4">Signup as Merchant</TabsTrigger>
                     </TabsList>
                     <TabsContent value="loginUser">
-                        <div className="signupForm grid grid-cols-2 gap-20 pt-[100px] pb-20">
-                            <div className="inputControl px-6 py-4 flex items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1">
-                                <img src={profile} alt="Name" className='mr-3' />
-                                <input type="text" name="name" id="name" className='' placeholder='Name' />
+                        <div className="signupForm">
+                            <div className="formControl my-4">
+                                <Label htmlFor="email">Email</Label>
+                                <Input type="email" placeholder="Enter your email" />
                             </div>
-                            <div className="inputControl px-6 py-4 flex items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1">
-                                <img src={lock} alt="Name" className='mr-3' />
-                                <input type="text" name="name" id="name" className='' placeholder='Mobile Number' />
+                            <div className="formControl my-4">
+                                <Label htmlFor="password">Password</Label>
+                                <Input type="password" placeholder="Enter your Password" />
                             </div>
-                            <div className="inputControl px-6 py-4 flex justify-between items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1 relative">
-                                <img src={upload} alt="Name" className='mr-3' />
-                                <input
-                                    type="file"
-                                    name="frontId"
-                                    id="frontId"
-                                    className='absolute top-0 right-0 bottom-0 left-0 opacity-0'
-                                    accept="image/*"
-                                    onChange={(e) => {
-                                        const file = e.target.files?.[0];
-                                        if (file) {
-                                            const reader = new FileReader();
-                                            reader.onload = (e) => {
-                                                const preview = document.getElementById('frontPreview');
-                                                if (preview && e.target?.result) {
-                                                    preview.src = e.target.result;
-                                                    preview.style.display = 'block';
-                                                }
-                                            };
-                                            reader.readAsDataURL(file);
-                                        }
-                                    }}
-                                />
-                                {<img id="frontPreview" className='h-10 hidden' alt="Preview" />}
-                                <p className='text-center'>Upload Government Id (front)</p>
+                            <div className="formControl my-4">
+                                <Label htmlFor="Upload Government Id(Front)">Upload Government Id(Front)</Label>
+                                <Input type="file" placeholder="Upload Government Id(Front)" />
                             </div>
-                            <div className="inputControl px-6 py-4 flex justify-between items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1 relative">
-                                <img src={upload} alt="Name" className='mr-3' />
-                                <input
-                                    type="file"
-                                    name="backId"
-                                    id="backId"
-                                    className='absolute top-0 right-0 bottom-0 left-0 opacity-0'
-                                    accept="image/*"
-                                    onChange={(e) => {
-                                        const file = e.target.files?.[0];
-                                        if (file) {
-                                            const reader = new FileReader();
-                                            reader.onload = (e) => {
-                                                const preview = document.getElementById('backPreview');
-                                                if (preview && e.target?.result) {
-                                                    preview.src = e.target.result;
-                                                    preview.style.display = 'block';
-                                                }
-                                            };
-                                            reader.readAsDataURL(file);
-                                        }
-                                    }}
-                                />
-                                {<img id="backPreview" className='h-10 hidden' alt="Preview" />}
-                                <p className='text-center'>Upload Government Id (Back)</p>
+                            <div className="formControl my-4">
+                                <Label htmlFor="Upload Government Id(Back)">Upload Government Id(Back)</Label>
+                                <Input type="file" placeholder="Upload Government Id(Back)" />
                             </div>
-
-                            <div className="inputControl px-6 py-4 flex items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1">
-                                <img src={calender} alt="Name" className='mr-3' />
-                                <input type="date" name="name" id="name" className='' placeholder='Name' />
+                            <div className="formControl my-4">
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <Button
+                                            variant={"outline"}
+                                            className={cn(
+                                                "w-[240px] justify-start text-left font-normal",
+                                                !date && "text-muted-foreground"
+                                            )}
+                                        >
+                                            <CalendarIcon />
+                                            {date ? format(date, "PPP") : <span>Date of birth</span>}
+                                        </Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0" align="start">
+                                        <Calendar
+                                            mode="single"
+                                            className="w-full"
+                                            selected={date}
+                                            onSelect={setDate}
+                                            initialFocus
+                                        />
+                                    </PopoverContent>
+                                </Popover>
                             </div>
-
+                            <Button className="bg-primary w-full my-4" >Create Account</Button>
                         </div>
                     </TabsContent>
                     <TabsContent value="loginShop">
-                        <div className="signupForm grid grid-cols-2 gap-20 pt-[100px] pb-20">
-                            <div className="inputControl px-6 py-4 flex items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1">
-                                <img src={profile} alt="Name" className='mr-3' />
-                                <input type="text" name="name" id="name" className='' placeholder='Name' />
+                        <div className="signupForm">
+                            <div className="formControl my-3">
+                                <Label htmlFor="phoneNumber">Phone</Label>
+                                <div className="flex">
+                                    <Select>
+                                        <SelectTrigger className="w-[100px]">
+                                            <SelectValue placeholder="+91" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectGroup>
+                                                <SelectItem value="+91">+91</SelectItem>
+                                            </SelectGroup>
+                                        </SelectContent>
+                                    </Select>
+                                    <Input type="number" placeholder="Enter your phone number" />
+                                </div>
                             </div>
-                            <div className="inputControl px-6 py-4 flex items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1">
-                                <img src={lock} alt="Name" className='mr-3' />
-                                <input type="text" name="name" id="name" className='' placeholder='Mobile Number' />
+                            <div className="formControl my-4">
+                                <Label htmlFor="password">Password</Label>
+                                <Input type="password" placeholder="Enter your Password" />
                             </div>
-                            <div className="inputControl px-6 py-4 flex justify-between items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1 relative">
-                                <img src={upload} alt="Name" className='mr-3' />
-                                <input
-                                    type="file"
-                                    name="frontId"
-                                    id="frontId"
-                                    className='absolute top-0 right-0 bottom-0 left-0 opacity-0'
-                                    accept="image/*"
-                                    onChange={(e) => {
-                                        const file = e.target.files?.[0];
-                                        if (file) {
-                                            const reader = new FileReader();
-                                            reader.onload = (e) => {
-                                                const preview = document.getElementById('frontPreview');
-                                                if (preview && e.target?.result) {
-                                                    preview.src = e.target.result;
-                                                    preview.style.display = 'block';
-                                                }
-                                            };
-                                            reader.readAsDataURL(file);
-                                        }
-                                    }}
-                                />
-                                {<img id="frontPreview" className='h-10 hidden' alt="Preview" />}
-                                <p className='text-center'>Upload Government Id (front)</p>
+                            <div className="formControl my-4">
+                                <Label htmlFor="Upload Government Id(Front)">Upload Government Id(Front)</Label>
+                                <Input type="file" placeholder="Upload Government Id(Front)" />
                             </div>
-                            <div className="inputControl px-6 py-4 flex justify-between items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1 relative">
-                                <img src={upload} alt="Name" className='mr-3' />
-                                <input
-                                    type="file"
-                                    name="backId"
-                                    id="backId"
-                                    className='absolute top-0 right-0 bottom-0 left-0 opacity-0'
-                                    accept="image/*"
-                                    onChange={(e) => {
-                                        const file = e.target.files?.[0];
-                                        if (file) {
-                                            const reader = new FileReader();
-                                            reader.onload = (e) => {
-                                                const preview = document.getElementById('backPreview');
-                                                if (preview && e.target?.result) {
-                                                    preview.src = e.target.result;
-                                                    preview.style.display = 'block';
-                                                }
-                                            };
-                                            reader.readAsDataURL(file);
-                                        }
-                                    }}
-                                />
-                                {<img id="backPreview" className='h-10 hidden' alt="Preview" />}
-                                <p className='text-center'>Upload Government Id (Back)</p>
+                            <div className="formControl my-4">
+                                <Label htmlFor="Upload Government Id(Back)">Upload Government Id(Back)</Label>
+                                <Input type="file" placeholder="Upload Government Id(Back)" />
                             </div>
-
-                            <div className="inputControl px-6 py-4 flex items-center bg-white border-solid border-[#F4F4F4] border-[1px] rounded-[8px] shadow-lg flex-1">
-                                <img src={calender} alt="Name" className='mr-3' />
-                                <input type="date" name="name" id="name" className='' placeholder='Name' />
+                            <div className="formControl my-4">
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <Button
+                                            variant={"outline"}
+                                            className={cn(
+                                                "w-[240px] justify-start text-left font-normal",
+                                                !date && "text-muted-foreground"
+                                            )}
+                                        >
+                                            <CalendarIcon />
+                                            {date ? format(date, "PPP") : <span>Date of birth</span>}
+                                        </Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0" align="start">
+                                        <Calendar
+                                            mode="single"
+                                            className="w-full"
+                                            selected={date}
+                                            onSelect={setDate}
+                                            initialFocus
+                                        />
+                                    </PopoverContent>
+                                </Popover>
                             </div>
-
+                            <Button className="bg-primary w-full my-4" >Create Account</Button>
                         </div>
-                        <Button className="bg-primary w-full">Login</Button>
                     </TabsContent>
                 </Tabs>
-                <div className='flex items-center justify-center gap-24'>
-                    <button className='bg-[#FFA500] py-8 px-14 rounded-[79px]'>
-                        <p className='m-0 text-[34px] font-medium text-white'>Create Account</p>
-                    </button>
-                </div>
-                <p className='text-center py-10 text-[28px]'>By providing your details, you agree to our <span className='font-semibold text-[#5BB450]'>Terms & Privacy Policy.</span></p>
+                <p className='text-center py-2 text-[14px]'>By providing your details, you agree to our <span className='font-semibold text-[#5BB450]'>Terms & Privacy Policy.</span></p>
+                <p className='text-center pb-0 text-[14px]'>if you have an account, click on <span className='font-semibold text-[#5BB450] cursor-pointer' onClick={() => showLoginForm.showLoginForm()}>Login</span></p>
             </div>
 
         </>
