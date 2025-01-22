@@ -6,6 +6,7 @@ import ticket from '../../assets/images/ticket.svg';
 
 const WinnerCard = (winningImage,title, winnningDate, winnerName, winningNumber) => {
     return (
+        <div className='winnerCardWrapper'>
         <div className='winnerCard text-black'>
             <div className="winnerItemImage">
                 <img src={card1} />
@@ -19,6 +20,7 @@ const WinnerCard = (winningImage,title, winnningDate, winnerName, winningNumber)
                 </ul>
                 <button className='text-[#FF5F00]'>Watch Draw</button>
             </div>
+        </div>
         </div>
     )
 }

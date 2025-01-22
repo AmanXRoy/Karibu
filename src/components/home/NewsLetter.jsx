@@ -18,7 +18,7 @@ function NewsLetter() {
                 </div>
             </div>
             <div className='w-1/2'>
-                <div className="newsLetterForm bg-primary rounded-ss-[15%] rounded-se-none rounded-es-none rounded-ee-[15%] p-8 py-16 w-[60%] mx-auto ">
+                <div className="newsLetterForm bg-primary rounded-ss-[15%] rounded-se-none rounded-es-none rounded-ee-[15%] p-8 py-16 w-[80%] mx-auto ">
                     <h2 className="text-5xl font-bold mb-6">Reach Us</h2>
                     <form className='grid gap-10'>
                         <div className="form_group">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Card from "../base/card";
+import Card from "../base/Card.jsx";
 import card1 from "../../assets/images/card1.png"
 import card2 from "../../assets/images/card2.png"
 import card3 from "../../assets/images/card3.png"
@@ -19,6 +19,7 @@ const cardData = [
         prizeName: "IPhone 13",
         rating: "5",
         price: "8.00",
+        isBuyMore: true,
     },
     {
         id: 2,
@@ -29,6 +30,8 @@ const cardData = [
         prizeName: "Samsung Galaxy Z Fold",
         rating: "5",
         price: "4.00",
+        isBuyMore: false,
+
     },
     {
         id: 3,
@@ -39,6 +42,8 @@ const cardData = [
         prizeName: "TVS Apache 125cc",
         rating: "5",
         price: "5.00",
+        isBuyMore: true,
+
     },
     {
         id: 4,
@@ -49,6 +54,8 @@ const cardData = [
         prizeName: "Toyota Double Cabin",
         rating: "5",
         price: "3.00",
+        isBuyMore: true,
+
     },
     {
         id: 5,
@@ -59,6 +66,8 @@ const cardData = [
         prizeName: "IPhone 15 pro",
         rating: "5",
         price: "7.00",
+        isBuyMore: true,
+
     },
     {
         id: 6,
@@ -69,6 +78,8 @@ const cardData = [
         prizeName: "Toyota Double Cabin",
         rating: "5",
         price: "3.00",
+        isBuyMore: true,
+
     },
 ];
 
@@ -84,9 +95,6 @@ function CompetitionList() {
                 <div>
                     <p>Showing 1-7 of 75 results</p>
                 </div>
-                <div>
-                    <SortButton options={sortOptions} textColor={'#000000'} />
-                </div>
             </div>
             <div className="card_section grid justify-between lg:grid-cols-3 sm:grid-cols-2 gap-24">
                 {cardData.map((card, index) => {
@@ -100,6 +108,7 @@ function CompetitionList() {
                             rating={card.rating}
                             price={card.price}
                             key={index + card.id}
+                            isBuyMore={card.isBuyMore}
                         />
                     );
                 })}
