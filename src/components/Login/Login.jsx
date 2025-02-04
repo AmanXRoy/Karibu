@@ -111,10 +111,10 @@ const Login = () => {
                           <Input type="number" placeholder="Enter your phone number" />
                         </div>
                       </div>
-                      <div className="formControl my-3">
+                      {/* <div className="formControl my-3">
                         <Label htmlFor="password">Password</Label>
                         <Input type="password" placeholder="Enter your Password" />
-                      </div>
+                      </div> */}
                       <div className="flex space-x-2 my-4">
                         <Checkbox id="terms1" />
                         <div className="grid gap-1.5 leading-none">

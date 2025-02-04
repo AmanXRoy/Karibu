@@ -68,10 +68,10 @@ const Signup = (showLoginForm) => {
                                     <Input type="number" placeholder="Enter your phone number" />
                                 </div>
                             </div>
-                            <div className="formControl my-4">
+                            {/* <div className="formControl my-4">
                                 <Label htmlFor="password">Password</Label>
                                 <Input type="password" placeholder="Enter your Password" />
-                            </div>
+                            </div> */}
                             <div className="formControl my-4">
                                 <Label htmlFor="Upload Government Id(Front)">Upload Government Id(Front)</Label>
                                 <Input type="file" placeholder="Upload Government Id(Front)" />
@@ -80,7 +80,7 @@ const Signup = (showLoginForm) => {
                                 <Label htmlFor="Upload Government Id(Back)">Upload Government Id(Back)</Label>
                                 <Input type="file" placeholder="Upload Government Id(Back)" />
                             </div>
-                            <div className="formControl my-4">
+                            {/* <div className="formControl my-4">
                                 <Popover>
                                     <PopoverTrigger asChild>
                                         <Button
@@ -104,7 +104,7 @@ const Signup = (showLoginForm) => {
                                         />
                                     </PopoverContent>
                                 </Popover>
-                            </div>
+                            </div> */}
                             <Button className="bg-primary w-full my-4" >Create Account</Button>
                         </div>
                     </TabsContent>
@@ -126,10 +126,10 @@ const Signup = (showLoginForm) => {
                                     <Input type="number" placeholder="Enter your phone number" />
                                 </div>
                             </div>
-                            <div className="formControl my-4">
+                            {/* <div className="formControl my-4">
                                 <Label htmlFor="password">Password</Label>
                                 <Input type="password" placeholder="Enter your Password" />
-                            </div>
+                            </div> */}
                             <div className="formControl my-4">
                                 <Label htmlFor="Upload Government Id(Front)">Upload Government Id(Front)</Label>
                                 <Input type="file" placeholder="Upload Government Id(Front)" />
@@ -138,7 +138,7 @@ const Signup = (showLoginForm) => {
                                 <Label htmlFor="Upload Government Id(Back)">Upload Government Id(Back)</Label>
                                 <Input type="file" placeholder="Upload Government Id(Back)" />
                             </div>
-                            <div className="formControl my-4">
+                            {/* <div className="formControl my-4">
                                 <Popover>
                                     <PopoverTrigger asChild>
                                         <Button
@@ -162,7 +162,7 @@ const Signup = (showLoginForm) => {
                                         />
                                     </PopoverContent>
                                 </Popover>
-                            </div>
+                            </div> */}
                             <Button className="bg-primary w-full my-4" >Create Account</Button>
                         </div>
                     </TabsContent>
