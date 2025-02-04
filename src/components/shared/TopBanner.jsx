@@ -25,8 +25,8 @@ function TopBanner() {
 
               <SelectItem value="English">English</SelectItem>
               <SelectItem value="French">French</SelectItem>
-              <SelectItem value="German">German</SelectItem>
-              <SelectItem value="Maltese">Maltese</SelectItem>
+              <SelectItem value="Swahilli">Swahilli</SelectItem>
+              <SelectItem value="Lingala">Lingala</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
