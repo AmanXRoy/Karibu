@@ -48,9 +48,25 @@ const Signup = (showLoginForm) => {
                     </TabsList>
                     <TabsContent value="loginUser">
                         <div className="signupForm">
-                            <div className="formControl my-4">
+                            {/* <div className="formControl my-4">
                                 <Label htmlFor="email">Email</Label>
                                 <Input type="email" placeholder="Enter your email" />
+                            </div> */}
+                            <div className="formControl my-3">
+                                <Label htmlFor="phoneNumber">Phone</Label>
+                                <div className="flex">
+                                    <Select>
+                                        <SelectTrigger className="w-[100px]">
+                                            <SelectValue placeholder="+91" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectGroup>
+                                                <SelectItem value="+91">+91</SelectItem>
+                                            </SelectGroup>
+                                        </SelectContent>
+                                    </Select>
+                                    <Input type="number" placeholder="Enter your phone number" />
+                                </div>
                             </div>
                             <div className="formControl my-4">
                                 <Label htmlFor="password">Password</Label>
