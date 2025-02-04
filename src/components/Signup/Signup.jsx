@@ -43,8 +43,8 @@ const Signup = (showLoginForm) => {
                 <h1 className='text-5xl text-center font-semibold'>Signup</h1>
                 <Tabs defaultValue="loginUser" className="w-full h-full my-4">
                     <TabsList className="grid w-full grid-cols-2 bg-primary text-[#000] p-1 h-full">
-                        <TabsTrigger value="loginUser" className="p-4">Signup as Individual</TabsTrigger>
-                        <TabsTrigger value="loginShop" className="p-4">Signup as Merchant</TabsTrigger>
+                        <TabsTrigger value="loginUser" className="p-2">Signup as Individual</TabsTrigger>
+                        <TabsTrigger value="loginShop" className="p-2">Signup as Merchant</TabsTrigger>
                     </TabsList>
                     <TabsContent value="loginUser">
                         <div className="signupForm">
@@ -152,7 +152,7 @@ const Signup = (showLoginForm) => {
                     </TabsContent>
                 </Tabs>
                 <p className='text-center py-2 text-[14px]'>By providing your details, you agree to our <span className='font-semibold text-[#5BB450]'>Terms & Privacy Policy.</span></p>
-                <p className='text-center pb-0 text-[14px]'>if you have an account, click on <span className='font-semibold text-[#5BB450] cursor-pointer' onClick={() => showLoginForm.showLoginForm()}>Login</span></p>
+                {/* <p className='text-center pb-0 text-[14px]'>if you have an account, click on <span className='font-semibold text-[#5BB450] cursor-pointer' onClick={() => showLoginForm.showLoginForm()}>Login</span></p> */}
             </div>
 
         </>

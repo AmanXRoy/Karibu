@@ -91,7 +91,7 @@ const Login = () => {
                       </div>
                     </form>
                     <Button className="bg-primary w-full">Login</Button>
-                    <p className='text-center py-4 text-[14px]'>Don't have an account, click on <span className='font-semibold text-[#5BB450] cursor-pointer' onClick={showSignupForm}>Sign up</span></p>
+                    {/* <p className='text-center py-4 text-[14px]'>Don't have an account, click on <span className='font-semibold text-[#5BB450] cursor-pointer' onClick={showSignupForm}>Sign up</span></p> */}
                   </TabsContent>
                   <TabsContent value="loginShop">
                     <form className="my-4">
@@ -128,7 +128,7 @@ const Login = () => {
                       </div>
                     </form>
                     <Button className="bg-primary w-full">Login</Button>
-                    <p className='text-center py-4 text-[14px]'>Don't have an account, click on <span className='font-semibold text-[#5BB450] cursor-pointer' onClick={showSignupForm}>Sign up</span></p>
+                    {/* <p className='text-center py-4 text-[14px]'>Don't have an account, click on <span className='font-semibold text-[#5BB450] cursor-pointer' onClick={showSignupForm}>Sign up</span></p> */}
                   </TabsContent>
                 </Tabs>
               </div>
