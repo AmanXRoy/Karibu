@@ -1,6 +1,17 @@
 import React from 'react'
 import RangeSlider from '../components/base/RangeSlider';
 import lotteryTicker from '../assets/images/lottery1.svg';
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import successSvg from '../assets/images/success.svg';
+import ticketPopup from '../assets/images/ticketPopup.svg';
+
 
 const LotteryDetails = () => {
     return (
@@ -48,10 +59,28 @@ const LotteryDetails = () => {
                     </div>
                     <div className="flex flex-wrap gap-5 justify-between mt-5 ml-7 max-w-full text-5xl font-semibold w-[1179px] max-md:text-4xl py-[20px] border-t-[1px] border-t-[#fff] border-b-[1px] border-solid border-b-[#fff]">
                         <div className="my-auto flex items-center flex-1">
-                           <p className='text-orange-500 max-md:text-4xl'> Price $ 5.00</p>
-                        <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors  py-[30px] px-[90px] ms-auto">
-                            Buy
-                        </button>
+                            <p className='text-orange-500 max-md:text-4xl'> Price $ 5.00</p>
+
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors  py-[30px] px-[90px] ms-auto">
+                                        Buy
+                                    </button>
+                                </DialogTrigger>
+                                <DialogContent className="sm:max-w-[884px]">
+                                    <div className='congratulationsWrapper flex items-center justify-center flex-col'>
+                                        <img src={successSvg} alt={'success'} />
+                                        <p className='text-[#4E4E4E] text-[24px] pb-[20px] font-medium'>Congratulations</p>
+                                        <p className='text-[#4E4E4E] text-[16px] pb-[40px]'>🎉 Your raffle ticket has been successfully purchased! 🎉</p>
+                                        <div className='flex items-center gap-[14px]'>
+                                            <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors  py-[30px] px-[90px] font-medium">
+                                                Continue Purchasing
+                                            </button>
+                                            <img src={ticketPopup} alt={'ticket'} />
+                                        </div>
+                                    </div>
+                                </DialogContent>
+                            </Dialog>
                         </div>
                     </div>
                 </div>
