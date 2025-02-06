@@ -49,3 +49,10 @@ body{
     border-bottom-left-radius: 0;
     border-bottom-right-radius:0;
 }
+
+.purchaseCard{
+    background: url(./assets/images/purchaseTicketbg.svg);
+    background-repeat: no-repeat;
+    background-position-x: 100px;
+    background-size: contain;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import card2 from '../../../assets/images/card2.png'
+import card2 from '../../../assets/images/card2.png';
+import cardBackground from '../../../assets/images/purchaseTicketbg.svg'
 
 function PurchaseTicketCard() {
   return (
-    <div className='purchaseCard flex items-center gap-[25px] bg-[#f7e8df] py-[16px] px-[20px]'>
+    <div className='purchaseCard flex items-center gap-[25px] py-[16px] px-[20px]'>
         <div className="ticketImage">
             <div className="imageBackground w-[250px] h-[250px] bg-[linear-gradient(#FFA500,#FFA500)] rounded-full border-[2px] border-solid border-[#FFFFFF] relative flex justify-center items-center">
                 <div className="image w-[200px]">
