@@ -65,8 +65,8 @@ const Login = () => {
               <div className="tabsWrapper">
                 <Tabs defaultValue="loginUser" className="w-full h-full my-4">
                   <TabsList className="grid w-full grid-cols-2 bg-primary text-[#000] p-1 h-full">
-                    <TabsTrigger value="loginUser" className="p-2">User/Merchant</TabsTrigger>
-                    <TabsTrigger value="loginShop" className="p-2">Shop</TabsTrigger>
+                    <TabsTrigger value="loginUser" className="p-2">Shop</TabsTrigger>
+                    <TabsTrigger value="loginShop" className="p-2">User/Merchant</TabsTrigger>
                   </TabsList>
                   <TabsContent value="loginUser">
                     <form className="my-4">

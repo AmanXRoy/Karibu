@@ -12,6 +12,7 @@ import { useEffect } from "react"
 import Winner from "./components/Winner/Winner"
 import Faq from "./components/Faq/Faq"
 import Privacy from "./components/Privacy/Privacy"
+import PurchaseTicket from "./components/purchaseTicket/PurchaseTicket"
 
 function App() {
   const pathName = useLocation()
@@ -34,6 +35,7 @@ function App() {
           <Route path="/winner" element={<Winner />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/privacypolicy" element={<Privacy />} />
+          <Route path="/purchaseticket" element={<PurchaseTicket />} />
         </Routes>
         <Footer />
       </div>

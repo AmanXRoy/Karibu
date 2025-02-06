@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import successSvg from '../assets/images/success.svg';
 import ticketPopup from '../assets/images/ticketPopup.svg';
+import { Link } from 'react-router-dom';
 
 
 const LotteryDetails = () => {
@@ -73,9 +74,11 @@ const LotteryDetails = () => {
                                         <p className='text-[#4E4E4E] text-[24px] pb-[20px] font-medium'>Congratulations</p>
                                         <p className='text-[#4E4E4E] text-[16px] pb-[40px]'>🎉 Your raffle ticket has been successfully purchased! 🎉</p>
                                         <div className='flex items-center gap-[14px]'>
+                                            <Link to={'/purchaseticket'}>
                                             <button className="tracking-tighter text-center text-white whitespace-nowrap bg-amber-500 rounded-[89px] max-md:px-5 max-md:text-4xl hover:bg-amber-600 transition-colors  py-[30px] px-[90px] font-medium">
                                                 Continue Purchasing
                                             </button>
+                                            </Link>
                                             <img src={ticketPopup} alt={'ticket'} />
                                         </div>
                                     </div>
