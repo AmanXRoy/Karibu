@@ -32,6 +32,7 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover"
+import { Link } from 'react-router-dom';
 
 
 const Signup = (showLoginForm) => {
@@ -105,7 +106,9 @@ const Signup = (showLoginForm) => {
                                     </PopoverContent>
                                 </Popover>
                             </div> */}
+                             <Link to="/verifyotp">
                             <Button className="bg-primary w-full my-4" >Create Account</Button>
+                            </Link>
                         </div>
                     </TabsContent>
                     <TabsContent value="loginShop">
@@ -163,7 +166,9 @@ const Signup = (showLoginForm) => {
                                     </PopoverContent>
                                 </Popover>
                             </div> */}
+                            <Link to="/verifyotp">
                             <Button className="bg-primary w-full my-4" >Create Account</Button>
+                            </Link>
                         </div>
                     </TabsContent>
                 </Tabs>

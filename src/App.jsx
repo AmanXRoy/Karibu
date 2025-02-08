@@ -13,6 +13,7 @@ import Winner from "./components/Winner/Winner"
 import Faq from "./components/Faq/Faq"
 import Privacy from "./components/Privacy/Privacy"
 import PurchaseTicket from "./components/purchaseTicket/PurchaseTicket"
+import VerifyOTP from "./components/Login/verifyOTP/VerifyOTP"
 
 function App() {
   const pathName = useLocation()
@@ -36,6 +37,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/privacypolicy" element={<Privacy />} />
           <Route path="/purchaseticket" element={<PurchaseTicket />} />
+          <Route path="/verifyotp" element={<VerifyOTP />} />
         </Routes>
         <Footer />
       </div>

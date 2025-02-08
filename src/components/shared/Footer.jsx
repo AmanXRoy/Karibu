@@ -30,7 +30,9 @@ function Footer() {
                         </RouterLink>
                         <RouterLink to='/winner'>
                             <li className="text-[#000]">Winner</li>
-
+                        </RouterLink>
+                        <RouterLink to='/reachus'>
+                            <li className="text-[#000]">Reach Us</li>
                         </RouterLink>
                     </ul>
                 </div>
